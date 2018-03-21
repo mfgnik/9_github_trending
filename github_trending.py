@@ -39,7 +39,7 @@ def print_repository_info(place, repository):
     print(50 * '-')
     print('Place of repository:', place)
     print('Name of repository:', repository['name'])
-    print('Url of repository:', repository['owner']['url'])
+    print('Url of repository:', repository['url'])
     print('Amount of open issues:', repository['open_issues_count'])
 
 
