@@ -15,7 +15,7 @@ pip install requirements.txt
 # Quick Start
 
 ```bash
-usage: git_hub.py [-h] [--top_size TOP_SIZE] [--days DAYS]
+usage: github_trending.py [-h] [--top_size TOP_SIZE] [--days DAYS]
 
 optional arguments:
   -h, --help           show this help message and exit
