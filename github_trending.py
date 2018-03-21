@@ -40,7 +40,21 @@ def print_repository_info(place, repository):
     print('Place of repository:', place)
     print('Name of repository:', repository['name'])
     print('Url of repository:', repository['url'])
-    print('Amount of open issues:', repository['open_issues_count'])
+    print('Amount of open issues:',
+          get_open_issues_amount(
+              repository['owner']['login'],
+              repository['name']
+          )
+          )
+
+
+def get_open_issues_amount(repo_owner, repo_name):
+    url = 'https://api.github.com/repos/{}/{}/issues'.format(
+        repo_owner,
+        repo_name
+    )
+    issues = requests.get(url).json()
+    return len(issues)
 
 
 if __name__ == '__main__':
